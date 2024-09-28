@@ -28,7 +28,7 @@ public class AnimalRetreat
 	{
 		attendant = new Attendant(attendantName); 
 		// will need to implement build spa
-		System.out.println("not implemented yet");
+		System.out.println("In Animal retreat constructor not implemented yet");
 	} // end constructor
 	
 	
@@ -36,7 +36,7 @@ public class AnimalRetreat
 	public static void cleanRoom(int roomToBeCleaned)
 	{
 		// this method will mark the room clean
-		System.out.println("Not implemented yet");
+		System.out.println("In Animal Retreat clean room not implemented yet");
 	} // end method to clean the room
 	
 	
