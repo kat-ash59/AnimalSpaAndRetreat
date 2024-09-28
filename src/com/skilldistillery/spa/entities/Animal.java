@@ -8,14 +8,15 @@
 
 package com.skilldistillery.spa.entities;
 
+import java.util.Arrays;
 import java.util.Objects;
+
 
 public abstract class Animal 
 {
 	// declare variables that are visible for whole class Animal
 	protected String name;
 	private String noise = "I\'m an animal and thats OK,  I sleep all night and play all day!";
-	
 	
 	
 	// constructors
@@ -35,7 +36,8 @@ public abstract class Animal
 		super();
 		this.name = name;
 		this.noise = noise;
-	}  // end constructor with variables
+	}  // end constructor with variables name, noise
+	
 
 
 	// this section contains the useful methods that Animal class uses
@@ -89,10 +91,9 @@ public abstract class Animal
 	@Override
 	public String toString() 
 	{
-		return "Animal [name=" + name + ", noise=" + noise + ", getClass()=" + getClass() + ", toString()="
+		return "Animal [name = " + name + ", nois e= " + noise + ", getClass() = " + getClass() + ", toString() = "
 				+ super.toString() + "]";
-	} // end toString method
-
+	} // end toStringMethod
 
 	// hashcode comparison method
 	@Override
@@ -100,6 +101,7 @@ public abstract class Animal
 	{
 		return Objects.hash(name, noise);
 	} // end hashCode method
+
 
 
 	// equals method that is used when comparing objects of the Animal class
