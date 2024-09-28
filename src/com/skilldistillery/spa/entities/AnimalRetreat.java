@@ -73,6 +73,14 @@ public class AnimalRetreat
 		System.out.println("In Animal Retreat closeInnForTheNight no implemented yet");
 	} // end method to leave the room and spa
 	
+	// set attendant name
+	public void setAttendant(Attendant attendant)
+	{
+		// this will set the attendant for the spa
+		System.out.println("In Animal Retreat setAttendant not implemented yet");
+		
+	} // end method setAttendant
+	
 	
 	// getter and setter for Animals visiting
 	public Animal[] getAnimalsThatCouldVisitTheSpa() 

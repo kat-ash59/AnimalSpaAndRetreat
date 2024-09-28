@@ -18,7 +18,7 @@ public class AnimalRetreatApp {
 	public static void main(String[] args) 
 	{
 		AnimalRetreatApp app = new AnimalRetreatApp();
-		app.run();
+		app.launchApp();
 		
 
 	} // end main
@@ -26,7 +26,7 @@ public class AnimalRetreatApp {
 	// this run method is the worker bee of the application
 	// it calls on all the methods that you want the application to perform
 	// for the end goal of meeting the requirements and executing as expected
-	public void run()
+	public void launchApp()
 	{
 		String noise;
 		AnimalRetreat myRetreat = new AnimalRetreat("Fred the Attendant");
