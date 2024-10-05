@@ -94,7 +94,7 @@ public class AnimalRetreatApp {
 			else if (menuSelection == 3)
 			{
 				myRetreat.startAttendantRounds(attendant);
-				System.out.println(attendant.getName() + "here. I have finished my tasks for the Day!!!");
+				System.out.println(attendant.getName() + " here. I have finished my tasks for the Day!!!");
 			}
 			else
 			{
