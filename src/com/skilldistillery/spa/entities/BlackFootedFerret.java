@@ -1,3 +1,13 @@
+/*
+ * This class extends the abstract class Animal and is home to the Blackfooted Ferret 
+ * 
+ * Date				Author			Purpose
+ * 09/27/2024		Kat Ash			created initial version of the BlackFooted Ferret class
+ * 									
+ * 
+ * 10/04/2024		Kat Ash			finalized code and ready to check in
+ */
+
 package com.skilldistillery.spa.entities;
 
 import java.util.Objects;

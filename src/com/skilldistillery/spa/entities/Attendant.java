@@ -3,7 +3,9 @@
  * Date				Author			Purpose
  * ===================================================================================================================
  * 09/27/2024		Kat Ash			created initial version of the Attendant class
+ * 									provides an attendant who will help around the spa
  * 
+ * 10/04/2024		Kat Ash			finalized code and ready to check in
  * 
  */
 
@@ -54,8 +56,8 @@ public class Attendant
 			System.out.println("In Attendant makeRounds");
 		} // end debug if
 	
-//		try 
-//		{
+		try 
+		{
 			int i = 0;
 			for(i = 0; i < 10; i++)
 			{
@@ -65,7 +67,7 @@ public class Attendant
 				{
 					if (debug == true)
 					{
-						System.out.println("in Attendant myworking animal is null callig clean Room");
+						System.out.println("in Attendant myworking animal is null calling clean Room");
 					} // end debug if
 					cleanRoom(i, animalsAtTheSpa);
 					System.out.println("Room " + i + " is now clean");
@@ -90,6 +92,7 @@ public class Attendant
 								+ animalsAtTheSpa[i].getName() 
 								+ " the " + animalsAtTheSpa[i].getSpecies() + "\n");
 						myworkingAnimal = animalsAtTheSpa[i];
+						System.out.println("I will now feed " + animalsAtTheSpa[i].getName());
 						myworkingAnimal.eat(100.0);
 					}
 						
@@ -101,13 +104,13 @@ public class Attendant
 				}
 			} // end for loop
 			
-//		} // end try
-//		catch (Exception e) 
-//		{
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//			System.out.println("You did something really wrong here");
-//		}
+		} // end try
+		catch (Exception e) 
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			System.out.println("You did something really wrong here");
+		}
 	
 	} // end makeRounds method
 	

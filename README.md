@@ -9,10 +9,15 @@ We hired the best attendant on the planet to provide for all our guests.
 
 ### Technologies Used
 Scanner
+
 while loops
+
 for loops
+
 arrays
+
 public static final
+
 lots of separate methods to get code a bit dryer
 
 
@@ -25,11 +30,14 @@ Build a little Test a little - cheep cheep cheep - build a little test a little 
 if reading from scanner an reading nextInt, nextDouble, nextChar
 you MUST cleanup after and use a nextLine to gobble up <cr> that is entered
 
+always double check requirements otherwise you might miss something
 
+one thing i noticed is animals can check in but they can never leave!
 
 ### Checklist
 
-Animal Class Hierarchy
+Animal Class 
+
 You will create an Animal class defining properties common to all animals like name, a common greeting (some would consider their greeting a noise, but it's their way of saying Hello), etc.
 
 You will also create specific animal subclasses that define the state and behavior unique to that kind-of animal.
@@ -48,7 +56,7 @@ A public void makeNoise method that prints a string (a simple output like "I am 
 An eat method that takes an int parameter (the amount of food it is being fed), and displays something like "Don't bother me, I'm eating ... lbs of food" (where ... is the value of the int parameter).
 
 Animal Subclasses
-Your animal retreat must have room for at least 10 kinds of Animals. They do not expect to fill every room when they open, but there are at least 3 of your animal subclasses that made early reservations that will occupy the spa when open (1 of each kind-of subclass you've created).
+Your animal retreat must have room for at least 10 kinds of Animals. They do not expect to fill every room 
 
 Examples: Hippo, Tarantula, Dragon, Xenomorph
 
@@ -59,8 +67,6 @@ Fields:
 Each subclass will have a private String noise field set to the noise that species of animal makes ("Chomp chomp chomp" for hippo, "Quack" for duck, "Sizzle" for xenomorph, etc.).
 
 
-
-
-completed in class 09/21/2024
+when they open, but there are at least 3 of your animal subclasses that made early reservations that will occupy the spa when open (1 of each kind-of subclass you've created). -- need to implement still as of 
 
 

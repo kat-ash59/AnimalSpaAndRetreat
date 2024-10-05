@@ -1,3 +1,13 @@
+/*
+ * This class extends the abstract class Animal and is home to the Faerie Dog 
+ * 
+ * Date				Author			Purpose
+ * 09/27/2024		Kat Ash			created initial version of the Faerie Dog class
+ * 									
+ * 
+ * 10/04/2024		Kat Ash			finalized code and ready to check in
+ */
+
 package com.skilldistillery.spa.entities;
 
 import java.util.Objects;
@@ -41,8 +51,8 @@ public class FaerieDog extends Animal
 	@Override
 	public void eat(double quantity)
 	{
-		System.out.println("Don't bother me, I\'m eating " + quantity + " ounces of mouth watering "
-				+ " mousies! Bite they little heads off and nibble they tiny feet!");
+		System.out.println("\n\tDon't bother me, I\'m eating " + quantity + " ounces of mouth watering "
+				+ " flowers, grasses, and various grains!");
 	}
 
 	public String getNoise() 

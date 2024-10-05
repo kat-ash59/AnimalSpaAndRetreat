@@ -1,3 +1,14 @@
+/*
+ * This class extends the abstract class Animal and is home to the Mouse 
+ * 
+ * Date				Author			Purpose
+ * 09/27/2024		Kat Ash			created initial version of the Mouse class
+ * 									
+ * 
+ * 10/04/2024		Kat Ash			finalized code and ready to check in
+ */
+
+
 package com.skilldistillery.spa.entities;
 
 import java.util.Objects;
@@ -10,9 +21,10 @@ public class Mouse extends Animal
 	{
 	} // end no arg constructor
 	
-	public Mouse(String noise) 
+	public Mouse(String name, String noise) 
 	{
 		super();
+		super.setName(name);
 		this.noise = noise;
 	} // end constructor
 	
@@ -32,8 +44,8 @@ public class Mouse extends Animal
 	@Override
 	public void eat(double quantity)
 	{
-		System.out.println("Don't bother me, I\'m eating " + quantity + " ounces of these seeds"
-				+ " berries, and nuts I found.");
+		System.out.println("\n\tDon't bother me, I\'m eating " + quantity + " ounces of these seeds"
+				+ " berries, and nuts I found.\n");
 	}
 	
 	@Override

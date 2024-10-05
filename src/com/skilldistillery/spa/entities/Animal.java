@@ -3,7 +3,9 @@
  * 
  * Date				Author			Purpose
  * 09/27/2024		Kat Ash			created initial version of the Animal abstract class
+ * 									it provides the foundation for the Animals that will enjoy the spa
  * 
+ * 10/04/2024		Kat Ash			finalized code and ready to check in
  */
 
 package com.skilldistillery.spa.entities;

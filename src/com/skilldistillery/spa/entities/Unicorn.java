@@ -1,3 +1,14 @@
+/*
+ * This class extends the abstract class Animal and is home to the Unicorn 
+ * 
+ * Date				Author			Purpose
+ * 09/27/2024		Kat Ash			created initial version of the Unicorn class
+ * 									
+ * 
+ * 10/04/2024		Kat Ash			finalized code and ready to check in
+ */
+
+
 package com.skilldistillery.spa.entities;
 
 import java.util.Objects;
@@ -15,10 +26,13 @@ public class Unicorn extends Animal
 		super();
 	} // end unicorn constructor no args
 
-	public Unicorn(String name) 
+	public Unicorn(String name, String noise) 
 	{
-		super(name);
-	} // end constructor set name
+		super();
+		super.setName(name);
+		this.noise = noise;
+		
+	} // end constructor set name and noise
 
 	public String getSpecies()
 	{
@@ -44,7 +58,8 @@ public class Unicorn extends Animal
 	@Override
 	public void eat(double quantity)
 	{
-		System.out.println("Don't bother me, I\'m eating " + quantity + " lbs of delicious Alfalfa Hay.");
+		System.out.println("\n\tDon't bother me, I\'m eating " + quantity + " lbs of delicious Alfalfa Hay"
+				+ "\n\twith an amazing side of cotton candy with rainbows!\n");
 	}
 
 	@Override

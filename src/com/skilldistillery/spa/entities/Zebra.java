@@ -5,6 +5,8 @@
  * Date				Author			Purpose
  * 09/27/2024		Kat Ash			created initial version of the Zebra class
  * 
+ * 10/04/2024		Kat Ash			finalized the code and ready to check in
+ * 
  */
 
 
@@ -25,9 +27,10 @@ public class Zebra  extends Animal
 	} // end no arg constructor
 
 
-	public Zebra(String noise) 
+	public Zebra(String name, String noise) 
 	{
 		super();
+		super.setName(name);
 		this.noise = noise;
 	} // end constructor
 	
@@ -60,7 +63,7 @@ public class Zebra  extends Animal
 	@Override
 	public void eat(double quantity)
 	{
-		System.out.println("Don't bother me, I\'m eating " + quantity + " lbs of mouth watering Sporobolus pumilus hay.");
+		System.out.println("\n\tDon't bother me, I\'m eating " + quantity + " lbs of mouth watering Sporobolus pumilus hay.\n");
 	} // end method eat
 	
 

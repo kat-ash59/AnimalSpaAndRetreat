@@ -1,3 +1,14 @@
+/*
+ * This class extends the abstract class Animal and is home to the Yellow Bellied Marmot
+ * 
+ * Date				Author			Purpose
+ * 09/27/2024		Kat Ash			created initial version of the Yellow Bellied Marmot class
+ * 									
+ * 
+ * 10/04/2024		Kat Ash			finalized code and ready to check in
+ */
+
+
 package com.skilldistillery.spa.entities;
 
 import java.util.Objects;
@@ -12,9 +23,10 @@ public class YellowBelliedMarmot extends Animal
 	}
 
 
-	public YellowBelliedMarmot(String noise) 
+	public YellowBelliedMarmot(String name, String noise) 
 	{
 		super();
+		super.setName(name);
 		this.noise = noise;
 	} // end constructor
 
@@ -41,10 +53,10 @@ public class YellowBelliedMarmot extends Animal
 	@Override
 	public void eat(double quantity)
 	{
-		System.out.println("Don't bother me, I\'m eating " + quantity + " ounces of mouth watering "
-				+ " herbaceous plant, grasses, grains, "
-				+ " various legumes, "
-				+ "	juicy fruit, and occasionally I get to eat some fleas.");
+		System.out.println("\n\tDon't bother me, I\'m eating " + quantity + " ounces of mouth watering "
+				+ "\n\therbaceous plant, grasses, grains, "
+				+ "\n\tvarious legumes, "
+				+ "\n\tjuicy fruit, and occasionally I get to eat some fleas!\n");
 	}
 
 	@Override

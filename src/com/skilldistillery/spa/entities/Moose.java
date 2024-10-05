@@ -1,3 +1,13 @@
+/*
+ * This class extends the abstract class Animal and is home to the Moose 
+ * 
+ * Date				Author			Purpose
+ * 09/27/2024		Kat Ash			created initial version of the Moose class
+ * 									
+ * 
+ * 10/04/2024		Kat Ash			finalized code and ready to check in
+ */
+
 package com.skilldistillery.spa.entities;
 
 import java.util.Objects;
@@ -10,9 +20,10 @@ public class Moose extends Animal
 	{
 	} // end no arg constructor
 
-	public Moose(String noise) 
+	public Moose(String name, String noise) 
 	{
 		super();
+		super.setName(name);
 		this.noise = noise;
 	} // end constructor
 	
@@ -39,8 +50,8 @@ public class Moose extends Animal
 	@Override
 	public void eat(double quantity)
 	{
-		System.out.println("Don't bother me, I\'m eating " + quantity + " pounds of mouth watering "
-				+ " Aspen, pin cherry, willows, water lillies.");
+		System.out.println("\n\tDon't bother me, I\'m eating " + quantity + " pounds of mouth watering "
+				+ " Aspen, pin cherry, willows, water lillies.\n");
 	}
 	
 

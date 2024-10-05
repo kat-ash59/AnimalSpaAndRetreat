@@ -5,7 +5,7 @@
  * 09/27/2024		Kat Ash			created initial version of the Animal Retreat class
  * 									which contains the foundation of the building that the
  * 									Animal Spa resides in
- * 
+ * 10/04/2024		Kat Ash			finalized the code and ready to check in
  * 
  */
 
@@ -24,7 +24,7 @@ public class AnimalRetreat
 	private Animal animalsAtTheSpa[] = new Animal[MAX_NUMBER_OF_ROOMS];
 	private String[] listOfAnimals = 
 		{"Black Footed Ferret", "Cat", "Faerie Dog", "Hippo", "Koala", "Moose", "Mouse", "Unicorn", "Yellow Bellied Marmot", "Zebra"};
-	private int currentOpenRoom = 0;
+	private int currentOpenRoom = 3;
 	private static boolean debug = false;
 	
 	// constructor
@@ -41,6 +41,17 @@ public class AnimalRetreat
 		
 		attendant.introduceSelf(attendantName);
 		
+		// prior to opening there are three animals in the spa
+		// need to add them here
+		Cat myCat = new Cat("Emmaline Pankhurst", "Hisss Purr Hisss Purrrr CHOMP!");
+		animalsAtTheSpa[0] = myCat;
+		
+		Unicorn myUnicorn = new Unicorn("Princess Sparkly Buttercup", "I am a Unicorn admire my shiny horn and my pearly white coat!\n"
+			+ "\tAs you now know, we Unicorns can speak the Human English Language!");
+		animalsAtTheSpa[1] = myUnicorn;
+		
+		FaerieDog myFaerieDog = new FaerieDog("Princess Pea Pod","I can grant you three wishes!!!  What do you wish for???");
+		animalsAtTheSpa[2] = myFaerieDog;
 	} // end constructor
 	
 	
@@ -49,6 +60,7 @@ public class AnimalRetreat
 	{
 		
 		int menuSelection = 0;
+		
 		
 		System.out.println("Hi, who would you like to reserve a room for?\n");
 		menuSelection = printSelectAnimalMenu(kb);
@@ -66,7 +78,7 @@ public class AnimalRetreat
 		{
 			addFaerieDog(kb);
 		}
-/*		else if (menuSelection == 3)
+		else if (menuSelection == 3)
 		{
 			addHippo(kb);
 		}
@@ -88,13 +100,14 @@ public class AnimalRetreat
 		}
 		else if (menuSelection == 8)
 		{
-			addYellowBeliedMarmot(kb);
+			addYellowBelliedMarmot(kb);
 		}
 		else if (menuSelection == 9)
 		{
 			addZebra(kb);
 		}
-*/
+		
+
 		if (debug == true)
 		{
 			System.out.println("at the end of add animal");
@@ -142,8 +155,6 @@ public class AnimalRetreat
 		String name = "";
 		String noise = "";
 		// now get name and noise of ferret
-
-		boolean enteredValidResponse = false;
 		
 		name = getNameFromOwner("Black Footed Ferret", kb);
 
@@ -152,6 +163,7 @@ public class AnimalRetreat
 		myFerret = new BlackFootedFerret(name, noise);
 		animalsAtTheSpa[currentOpenRoom] = myFerret;
 		currentOpenRoom++;
+		System.out.println("Hi " + name + " please makeyourself at home");
 	}  // end method addBlakFootedFerret
 	
 	public void addCat(Scanner kb)
@@ -160,8 +172,6 @@ public class AnimalRetreat
 		String name = "";
 		String noise = "";
 		// now get name and noise of the cat
-
-		boolean enteredValidResponse = false;
 		
 		name = getNameFromOwner("Cat", kb);
 		
@@ -183,17 +193,17 @@ public class AnimalRetreat
 		
 		currentOpenRoom++;
 		
+		System.out.println("Hi " + name + " please makeyourself at home");
+		
 		
 	} // end method addCat
 	
-	public void addBlackFootedFerret(Scanner kb)
+	public void addFaerieDog(Scanner kb)
 	{
 		FaerieDog myFaerieDog = new FaerieDog();
 		String name = "";
 		String noise = "";
 		// now get name and noise of Faerie Dog
-
-		boolean enteredValidResponse = false;
 		
 		name = getNameFromOwner("Faerie Dog", kb);
 
@@ -202,9 +212,152 @@ public class AnimalRetreat
 		myFaerieDog = new FaerieDog(name, noise);
 		animalsAtTheSpa[currentOpenRoom] = myFaerieDog;
 		currentOpenRoom++;
+		
+		System.out.println("Hi " + name + " please makeyourself at home");
+		
 	}  // end method addFaerieDog
 
+	public void addHippo(Scanner kb)
+	{
+		Hippo myHippo = new Hippo();
+		String name = "";
+		String noise = "";
+		// now get name and noise of Hippo
+		
+		name = getNameFromOwner("Hippo", kb);
 
+		noise = getNoiseFromOwner("Hippo", kb);
+		
+		myHippo = new Hippo(name, noise);
+		animalsAtTheSpa[currentOpenRoom] = myHippo;
+		currentOpenRoom++;
+		
+		System.out.println("Hi " + name + " please makeyourself at home");
+
+	}  // end method addHippo
+	
+	public void addKoala(Scanner kb)
+	{
+		Koala myKoala = new Koala();
+		String name = "";
+		String noise = "";
+		// now get name and noise of Koala
+		
+		name = getNameFromOwner("Koala", kb);
+
+		noise = getNoiseFromOwner("Koala", kb);
+		
+		myKoala = new Koala(name, noise);
+		animalsAtTheSpa[currentOpenRoom] = myKoala;
+		currentOpenRoom++;
+		
+		System.out.println("Hi " + name + " please makeyourself at home");
+
+	}  // end method addKoala
+	
+
+	public void addMoose(Scanner kb)
+	{
+		Moose myMoose = new Moose();
+		String name = "";
+		String noise = "";
+		// now get name and noise of Moose
+		
+		name = getNameFromOwner("Moose", kb);
+
+		noise = getNoiseFromOwner("Moose", kb);
+		
+		myMoose = new Moose(name, noise);
+		animalsAtTheSpa[currentOpenRoom] = myMoose;
+		currentOpenRoom++;
+		
+		System.out.println("Hi " + name + " please makeyourself at home");
+
+		
+	}  // end method addMoose
+	
+	
+	public void addMouse(Scanner kb)
+	{
+		Mouse myMouse = new Mouse();
+		String name = "";
+		String noise = "";
+		// now get name and noise of Mouse
+		
+		name = getNameFromOwner("Mouse", kb);
+
+		noise = getNoiseFromOwner("Mouse", kb);
+		
+		myMouse = new Mouse(name, noise);
+		animalsAtTheSpa[currentOpenRoom] = myMouse;
+		currentOpenRoom++;
+		
+		
+		System.out.println("Hi " + name + " please makeyourself at home");
+
+	}  // end method addMouse
+	
+	
+	public void addUnicorn(Scanner kb)
+	{
+		Unicorn myUnicorn = new Unicorn();
+		String name = "";
+		String noise = "";
+		// now get name and noise of Unicorn
+		
+		name = getNameFromOwner("Unicorn", kb);
+
+		noise = getNoiseFromOwner("Unicorn", kb);
+		
+		myUnicorn = new Unicorn(name, noise);
+		animalsAtTheSpa[currentOpenRoom] = myUnicorn;
+		currentOpenRoom++;
+		
+		System.out.println("Hi " + name + " please makeyourself at home");
+
+	}  // end method addUnicorn
+	
+	
+	public void addYellowBelliedMarmot(Scanner kb)
+	{
+		YellowBelliedMarmot myYellowBelliedMarmot = new YellowBelliedMarmot();
+		String name = "";
+		String noise = "";
+		// now get name and noise of Yellow Bellied Marmot
+		
+		name = getNameFromOwner("Yellow Bellied Marmot", kb);
+
+		noise = getNoiseFromOwner("Yellow Bellied Marmot", kb);
+		
+		myYellowBelliedMarmot = new YellowBelliedMarmot(name, noise);
+		animalsAtTheSpa[currentOpenRoom] = myYellowBelliedMarmot;
+		currentOpenRoom++;
+		
+		System.out.println("Hi " + name + " please makeyourself at home");
+
+	}  // end method addYellowBelliedMarmot
+	
+	
+	public void addZebra(Scanner kb)
+	{
+		Zebra myZebra = new Zebra();
+		String name = "";
+		String noise = "";
+		// now get name and noise of Zebra
+
+		name = getNameFromOwner("Zebra", kb);
+
+		noise = getNoiseFromOwner("Zebra", kb);
+		
+		myZebra = new Zebra(name, noise);
+		animalsAtTheSpa[currentOpenRoom] = myZebra;
+		currentOpenRoom++;
+		
+		System.out.println("Hi " + name + " please makeyourself at home");
+
+	}  // end method addZebra
+	
+	
 	public String getNameFromOwner(String species, Scanner kb)
 	{		
 		String name = null;
@@ -276,6 +429,10 @@ public class AnimalRetreat
 	} // end getNoiseFromOwner
 
 
+	public int getCurrentOpenRoom()
+	{
+		return this.currentOpenRoom;
+	} // end method currentOpenRoom
 	
 	public void printRoomsAndOccupantsAtSpa()
 	{
@@ -301,7 +458,8 @@ public class AnimalRetreat
 				{
 					System.out.println("Room " + i + " is occupied by " 
 							+ animalsAtTheSpa[i].getName() 
-							+ " the " + animalsAtTheSpa[i].getSpecies());
+							+ " the " + animalsAtTheSpa[i].getSpecies()
+							+ "\n\twho says \"" + animalsAtTheSpa[i].getNoise() + "\"\n");
 				}
 			}
 		} catch (Exception e) 
@@ -334,22 +492,12 @@ public class AnimalRetreat
 		
 	} // end method startAttendantRounds
 	
-/*	
-	public void closeInnForTheNight(Animal animalToLeaveSpa)
-	{
-		// this method will have the animal leave the spa
-		// vacate the room and mark it dirty
-		System.out.println("In Animal Retreat closeInnForTheNight no implemented yet");
-	} // end method to leave the room and spa
-*/
-	
 	public String[] getListOfAnimals()
 	{
 		return this.listOfAnimals;
 	} // end method getListOfAnimals
 
 
-	
 	// set attendant name
 	public void setAttendant(Attendant attendant)
 	{
@@ -404,11 +552,4 @@ public class AnimalRetreat
 	} // end method equals
 	
 
-	
-	
-	
-	
-	
-	
-	
 } // end class AnimalRetreat

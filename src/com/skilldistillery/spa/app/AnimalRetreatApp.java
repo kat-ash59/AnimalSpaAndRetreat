@@ -3,7 +3,10 @@
  * Date			Author			Purpose
  * ===================================================================================================================
  * 09/27/2024	Kat Ash			Initial version of Animal Retreat application
+ * 								which will call the classes and methods that will create
+ * 								and run the spa
  * 
+ * 10/04/2024	Kat Ash			Finalized the code and ready to check in
  */
 
 package com.skilldistillery.spa.app;
@@ -43,13 +46,15 @@ public class AnimalRetreatApp {
 	{
 		Scanner keyboard = new Scanner(System.in);
 		
+		
 		System.out.println(attendant.getName() + " here.  Let\'s get this party started!");
 		System.out.println("Here are our offerings from our Spa Menu!\n");
 			
 		menu(myRetreat, keyboard, attendant);
 		
 		keyboard.close();
-		System.out.println("\n\nGood Night See you all tomorrow!");
+		System.out.println("\n\n\"Relax\"\n,said " + attendant.getName() + ",\n\"I am programmed to receive\"\n"
+				+ "\"You can check out any time you like, but you can never leave!\"\n");
 		System.exit(0);
 		
 	} // end run
@@ -76,7 +81,15 @@ public class AnimalRetreatApp {
 			}
 			else if (menuSelection == 2)
 			{
-				myRetreat.addAnimal(kb);
+				int currentRoomCount = myRetreat.getCurrentOpenRoom();
+				if (currentRoomCount < 10)
+				{
+					myRetreat.addAnimal(kb);
+				}
+				else
+				{
+					System.out.println("Sorry we are all booked up Please come back another day");
+				}
 			}
 			else if (menuSelection == 3)
 			{

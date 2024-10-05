@@ -1,3 +1,13 @@
+/*
+ * This class extends the abstract class Animal and is home to the Hippo 
+ * 
+ * Date				Author			Purpose
+ * 09/27/2024		Kat Ash			created initial version of the Hippo class
+ * 									
+ * 
+ * 10/04/2024		Kat Ash			finalized code and ready to check in
+ */
+
 package com.skilldistillery.spa.entities;
 
 import java.util.Objects;
@@ -11,9 +21,10 @@ public class Hippo extends Animal
 	{
 	} // end no arg constructor
 
-	public Hippo(String noise) 
+	public Hippo(String name, String noise) 
 	{
 		super();
+		super.setName(name);
 		this.noise = noise;
 	} // end constructor
 	
@@ -40,7 +51,7 @@ public class Hippo extends Animal
 	@Override
 	public void eat(double quantity)
 	{
-		System.out.println("Don't bother me, I\'m eating " + quantity + " lbs of delicious Salad and amazing Timothy Hay.");
+		System.out.println("\n\tDon't bother me, I\'m eating " + quantity + " lbs of delicious Salad and amazing Timothy Hay.\n");
 	}
 
 	public String getNoise() 
