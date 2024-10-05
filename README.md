@@ -2,20 +2,28 @@
 
 
 ### Description
-We Welcome you to our luxurious Spa and Retreat where your favorite animal will be treated to extremely luxurious
-spa treaments, including but not limited to mani/pedis, facials, shampoo, conditioner, hair styling, massage, ...
-We hope your animal enjoys their stay with us and comes home with a new attitude on life.
+We're excited to announce the COMPLETION of building out our NEW Animal Retreat and Spa Resort.
+We welcome our non-human guests, and invite them all to luxuriate in delight!
+We hired the best attendant on the planet to provide for all our guests.
 
 
 ### Technologies Used
-
+Scanner
+while loops
+for loops
+arrays
+public static final
+lots of separate methods to get code a bit dryer
 
 
 ### Lessons Learned
-Use Sysout to test as you build
+Use Sysout to test as you build and add if (debug == true) around it so you
+can turn them off and on without having to worry about going back and deleting them
 
-Build a little Test a little - cheep cheep cheep
+Build a little Test a little - cheep cheep cheep - build a little test a little - cheep
 
+if reading from scanner an reading nextInt, nextDouble, nextChar
+you MUST cleanup after and use a nextLine to gobble up <cr> that is entered
 
 
 
@@ -28,6 +36,8 @@ You will also create specific animal subclasses that define the state and behavi
 
 public class Animal
 Fields:
+name
+noise
 
 A private name field.
 Methods:

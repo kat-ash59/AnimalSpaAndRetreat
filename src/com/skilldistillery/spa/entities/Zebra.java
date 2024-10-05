@@ -42,6 +42,12 @@ public class Zebra  extends Animal
 		
 	} // end makeNoise method
 	
+	public String getSpecies()
+	{
+		return "Zebra";
+	} // end method getSpecies
+
+	
 	@Override
 	public void makeNoise(String noise)
 	{

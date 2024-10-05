@@ -16,6 +16,10 @@ public class Mouse extends Animal
 		this.noise = noise;
 	} // end constructor
 	
+	public String getSpecies()
+	{
+		return "Mouse";
+	} // end method getSpecies
 	
 	@Override
 	public void makeNoise()

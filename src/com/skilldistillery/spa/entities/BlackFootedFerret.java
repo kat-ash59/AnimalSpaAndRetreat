@@ -16,6 +16,17 @@ public class BlackFootedFerret extends Animal
 		this.noise = noise;
 	} // end constructor
 	
+	public BlackFootedFerret(String name, String noise) 
+	{
+		super.name = name;
+		this.noise = noise;
+	} // end no arg constructor
+	
+	public String getSpecies()
+	{
+		return "Black Footed Ferret";
+	} // end method getSpecies
+	
 	@Override
 	public void makeNoise()
 	{
@@ -35,8 +46,8 @@ public class BlackFootedFerret extends Animal
 	@Override
 	public void eat(double quantity)
 	{
-		System.out.println("Don't bother me, I\'m eating " + quantity + " ounces of mouth watering "
-				+ " juicy fruit, lichen, moss, flowers and various roots.");
+		System.out.println("\n\tDon't bother me, I\'m eating " + quantity + " ounces of mouth watering\n "
+				+ "\tjuicy fruit, lichen, moss, flowers and various roots.\n");
 	}
 
 	public String getNoise() 

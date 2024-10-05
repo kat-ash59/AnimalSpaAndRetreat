@@ -16,6 +16,11 @@ public class Koala extends Animal
 		this.noise = noise;
 	} // end constructor
 	
+	public String getSpecies()
+	{
+		return "Koala";
+	} // end method getSpecies
+	
 	@Override
 	public void makeNoise()
 	{

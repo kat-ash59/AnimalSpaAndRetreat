@@ -16,6 +16,10 @@ public class Moose extends Animal
 		this.noise = noise;
 	} // end constructor
 	
+	public String getSpecies()
+	{
+		return "Moose";
+	} // end method getSpecies
 	@Override
 	public void makeNoise()
 	{

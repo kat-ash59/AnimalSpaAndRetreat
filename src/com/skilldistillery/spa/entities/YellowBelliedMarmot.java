@@ -26,6 +26,10 @@ public class YellowBelliedMarmot extends Animal
 		
 	} // end makeNoise method
 	
+	public String getSpecies()
+	{
+		return "Yellow Bellied Marmot";
+	} // end method getSpecies
 	@Override
 	public void makeNoise(String noise)
 	{

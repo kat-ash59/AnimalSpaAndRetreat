@@ -5,7 +5,7 @@ import java.util.Objects;
 public class Unicorn extends Animal
 {
 	private String noise = "I am a Unicorn admire my shiny horn and my pearly white coat!\n"
-			+ "As you now know, we Unicorns can speak the Human English Language!";
+			+ "As you now know, we Unicorns can speak the Human English Language!\n";
 	
 	
 	
@@ -20,6 +20,11 @@ public class Unicorn extends Animal
 		super(name);
 	} // end constructor set name
 
+	public String getSpecies()
+	{
+		return "Unicorn";
+	} // end method getSpecies
+	
 	@Override
 	public void makeNoise()
 	{

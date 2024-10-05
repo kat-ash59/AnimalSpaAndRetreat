@@ -10,11 +10,25 @@ public class Cat extends Animal
 	{
 	} // end no arg constructor
 
-	public Cat(String noise) 
+	public Cat(String name, String noise) 
 	{
 		super();
+		super.setName(name);
 		this.noise = noise;
 	} // end constructor
+	
+	public String getSpecies()
+	{
+		return "Cat";
+	} // end method getSpecies
+	
+	@Override
+	public void eat(double quantity)
+	{
+		System.out.println("\tDon't bother me, I\'m eating " + quantity 
+				+ " ounces of delicious temptation treats.\n"
+				+ "\tGET OUT NOW!!!!!\n");
+	} // end method eat
 	
 	@Override
 	public void makeNoise()

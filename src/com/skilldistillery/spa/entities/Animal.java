@@ -16,7 +16,7 @@ public abstract class Animal
 {
 	// declare variables that are visible for whole class Animal
 	protected String name;
-	private String noise = "I\'m an animal and thats OK,  I sleep all night and play all day!";
+	private String noise = "I\'m an animal and thats OK,  I sleep all night and play all day!\n";
 	
 	
 	// constructors
@@ -45,6 +45,7 @@ public abstract class Animal
 	// methods
 	public void makeNoise(String noise)
 	{
+		System.out.println(this.noise);
 		System.out.println(noise);
 	}  // end method makeNoise with arguments
 	
@@ -117,6 +118,9 @@ public abstract class Animal
 		Animal other = (Animal) obj;
 		return Objects.equals(name, other.name) && Objects.equals(noise, other.noise);
 	} // end equals method
+
+
+	protected abstract String getSpecies();
 	
 	
 	

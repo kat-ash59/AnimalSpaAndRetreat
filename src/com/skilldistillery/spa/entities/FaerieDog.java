@@ -2,19 +2,25 @@ package com.skilldistillery.spa.entities;
 
 import java.util.Objects;
 
-public class FairyDogs extends Animal
+public class FaerieDog extends Animal
 {
 	private String noise = "I can grant you three wishes!!!  What do you wish for???";
 
-	public FairyDogs() 
+	public FaerieDog() 
 	{
 	} // end no arg constructor
 
-	public FairyDogs(String noise) 
+	public FaerieDog(String name, String noise) 
 	{
 		super();
+		super.setName(name);
 		this.noise = noise;
 	} // end constructor
+	
+	public String getSpecies()
+	{
+		return "Faerie Dog";
+	} // end method getSpecies
 	
 	@Override
 	public void makeNoise()
@@ -27,7 +33,7 @@ public class FairyDogs extends Animal
 	@Override
 	public void makeNoise(String noise)
 	{
-		FairyDogs myFairyDog = new FairyDogs();
+		FaerieDog myFairyDog = new FaerieDog();
 		myFairyDog.makeNoise();
 		System.out.println(noise);
 	}
@@ -74,7 +80,7 @@ public class FairyDogs extends Animal
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		FairyDogs other = (FairyDogs) obj;
+		FaerieDog other = (FaerieDog) obj;
 		return Objects.equals(noise, other.noise);
 	}
 	
